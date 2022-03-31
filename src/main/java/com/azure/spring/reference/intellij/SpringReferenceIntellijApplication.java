@@ -33,7 +33,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -61,7 +64,6 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
             .stream()
             .filter(spec -> spec.getDescription() != null)
             .forEach(spec -> spec.setDescription(spec.getDescription().trim()));
-//            .forEach(spec -> spec.setDescription(spec.getDescription().replaceAll(System.lineSeparator(), "").trim()));
 
         this.properties
             .getServices()
@@ -69,7 +71,6 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
             .flatMap(serviceSpec -> serviceSpec.getFeatures().stream())
             .filter(featureSpec -> featureSpec.getDescription() != null)
             .forEach(spec -> spec.setDescription(spec.getDescription().trim()));
-//            .forEach(spec -> spec.setDescription(spec.getDescription().replaceAll(System.lineSeparator(), "").trim()));
 
 
         this.springArtifactMap =
@@ -114,7 +115,16 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
                     LOGGER.info("File already exists!");
                 }
             }
-            objectMapper.writeValue(resultFile, result);
+            try (OutputStream fos = new FileOutputStream(resultFile)) {
+                String comment =
+                    """
+                    # Please refer to this link to see design details and how to change: 
+                    # https://dev.azure.com/azure-spring-integration/spring-integration-private/_wiki/wikis/spring-integration-private.wiki/280/Spring-Reference-for-Intellij-Plugin.
+                    
+                    """;
+                fos.write(comment.getBytes(StandardCharsets.UTF_8));
+                objectMapper.writeValue(fos, result);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -196,7 +206,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
                     <dependencies>
                       <dependency>
                         <groupId>com.azure.spring</groupId>
-                        <artifactId>azure-spring-boot-bom</artifactId>
+                        <artifactId>spring-cloud-azure-dependencies</artifactId>
                         <version>${azure.version}</version>
                         <type>pom</type>
                         <scope>import</scope>
@@ -208,7 +218,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
                 """
                 dependencyManagement {
                   imports {
-                    mavenBom "com.azure.spring:azure-spring-boot-bom:${azure.version}"
+                    mavenBom "com.azure.spring:spring-cloud-azure-dependencies:${azure.version}"
                   }
                 }    
                 """);

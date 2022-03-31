@@ -326,13 +326,17 @@ spring.cloud.azure.reference:
             is optimized for storing massive amounts of unstructured data. Unstructured data is
             data that does not adhere to a particular data model or definition, such as text or
             binary data.
-        - name: "Storage - File Shares"
+        - name: "Storage - Files Shares"
           ms-docs: https://docs.microsoft.com/azure/storage/files/
           artifact-selectors:
             - azure-service: storage
               azure-sub-service: fileshare
           description: |
-            todo
+            Azure File Share storage offers fully managed file shares in the cloud that are
+            accessible via the industry standard Server Message Block (SMB) protocol. Azure file
+            shares can be mounted concurrently by cloud or on-premises deployments of Windows,
+            Linux, and macOS. Additionally, Azure file shares can be cached on Windows Servers
+            with Azure File Sync for fast access near where the data is being used.
         - name: "Storage - Queues"
           ms-docs: https://docs.microsoft.com/azure/storage/queues/
           artifact-selectors:
