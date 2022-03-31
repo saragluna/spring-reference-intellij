@@ -60,14 +60,16 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
             .getSpringArtifacts()
             .stream()
             .filter(spec -> spec.getDescription() != null)
-            .forEach(spec -> spec.setDescription(spec.getDescription().replaceAll(System.lineSeparator(), "")));
+            .forEach(spec -> spec.setDescription(spec.getDescription().trim()));
+//            .forEach(spec -> spec.setDescription(spec.getDescription().replaceAll(System.lineSeparator(), "").trim()));
 
         this.properties
             .getServices()
             .stream()
             .flatMap(serviceSpec -> serviceSpec.getFeatures().stream())
             .filter(featureSpec -> featureSpec.getDescription() != null)
-            .forEach(spec -> spec.setDescription(spec.getDescription().replaceAll(System.lineSeparator(), "")));
+            .forEach(spec -> spec.setDescription(spec.getDescription().trim()));
+//            .forEach(spec -> spec.setDescription(spec.getDescription().replaceAll(System.lineSeparator(), "").trim()));
 
 
         this.springArtifactMap =
