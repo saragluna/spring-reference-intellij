@@ -1,0 +1,411 @@
+spring.cloud.azure.reference:
+  spring-artifacts:
+    - artifact-id: "spring-cloud-azure-dependencies"
+      bom: true
+      label: bom
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#bill-of-material-bom
+      description: |
+        Bill of Materials (BOM) for Spring Cloud Azure support.
+
+    - artifact-id: "spring-cloud-azure-starter-active-directory"
+      azure-service: aad
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-active-directory
+      description: |
+        Microsoft's Spring Boot Starter provides the most optimal way to connect your Web 
+        application to an Azure Active Directory (AAD for short) tenant and protect resource server 
+        with AAD. It uses the Oauth 2.0 protocol to protect Web applications and resource servers.
+
+    - artifact-id: "spring-cloud-azure-starter-active-directory-b2c"
+      azure-service: aadb2c
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc
+      desscription: |
+        Microsoft's Spring Boot Starter provides auto-configuration of Azure Active Directory B2C, 
+        which allows you to manage customer, consumer, and citizen access to your 
+        business-to-consumer (B2C) applications.
+
+    - artifact-id: "spring-cloud-azure-starter-appconfiguration"
+      azure-service: appconfiguration
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
+      sample-link: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/appconfiguration
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Azure App Configuration.
+
+    - artifact-id: "spring-cloud-azure-starter-cosmos"
+      azure-service: cosmos
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Azure Cosmos DB, which enables developers to easily integrate with Azure Cosmos DB SQL API.
+
+    - artifact-id: "spring-cloud-azure-starter-data-cosmos"
+      azure-service: cosmos
+      label: spring-data
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Spring Data Azure Cosmos DB, which enables developers to easily integrate with Azure Cosmos 
+        DB SQL API using Spring Data.
+
+    - artifact-id: "spring-cloud-azure-starter-eventhubs"
+      azure-service: eventhubs
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Azure Event Hubs.    
+
+    - artifact-id: "spring-cloud-azure-starter-keyvault-secrets"
+      azure-service: keyvault
+      azure-sub-service: secrets
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Azure Key Vault Secrets, and adds Azure Key Vault as one of Spring PropertySource. 
+        Secrets stored in Azure Key Vault could be easily used and conveniently accessed like other 
+        externalized configuration property.
+
+    - artifact-id: "azure-spring-boot-starter-keyvault-certificates"
+      azure-service: keyvault
+      azure-sub-service: certificates
+      v4: false
+      contains-source-code: true
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault-certificates
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/azure-spring-boot-starter-keyvault-certificates
+      sample-link: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/keyvault/azure-spring-boot-starter-keyvault-certificates
+      description: |
+        Microsoft's Spring Boot Starter provides a secure and frictionless way to enable TLS with 
+        help from Azure Key Vault and managed identity for Azure resources.    
+
+    - artifact-id: "spring-cloud-azure-starter-storage-blob"
+      azure-service: storage
+      azure-sub-service: blobs
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-storage
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Azure Storage Blob, and implements Spring Resource abstraction for Azure Storage 
+        service which allows you to interact with Storage Blob using Spring programming model.
+
+    - artifact-id: "spring-cloud-azure-starter-storage-file-share"
+      azure-service: storage
+      azure-sub-service: fileshare
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#resource-handling
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Azure Storage File Share, and implements Spring Resource abstraction for Azure Storage 
+        service which allows you to interact with Storage File Share using Spring programming model.
+
+    - artifact-id: "spring-cloud-azure-starter-storage-queue"
+      azure-service: storage
+      azure-sub-service: queues
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Azure Storage Queue.
+
+    - artifact-id: "spring-cloud-azure-starter-servicebus"
+      azure-service: servicebus
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of 
+        Azure Service Bus.
+
+    - artifact-id: "spring-cloud-azure-starter-servicebus-jms"
+      azure-service: servicebus
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-service-bus
+      label: jms
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Spring JMS with Azure Service Bus Queue and Topic.
+
+    - artifact-id: "spring-cloud-azure-starter-integration-eventhubs"
+      azure-service: eventhubs
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-service-bus
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Spring Integration Azure Event Hubs.
+
+    - artifact-id: "spring-cloud-azure-starter-integration-servicebus"
+      azure-service: servicebus
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-service-bus
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Spring Integration Azure Service Bus.
+
+    - artifact-id: "spring-cloud-azure-starter-integration-storage-queue"
+      azure-service: storage
+      azure-sub-service: queues
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-service-bus
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Spring Integration Azure Storage Queue.    
+
+    - artifact-id: "spring-integration-azure-eventhubs"
+      azure-service: eventhubs
+      contains-source-code: true
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#spring-integration-support
+      description: |
+        Microsoft's Spring Integration extension for Azure Event Hubs. Spring Integration extends
+        the Spring programming modoel to support well-known Enterprise Integration Patterns.
+
+    - artifact-id: "spring-integration-azure-servicebus"
+      azure-service: servicebus
+      contains-source-code: true
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#spring-integration-support
+      description: |
+        Microsoft's Spring Integration extension for Azure Service Bus. Spring Integration extends
+        the Spring programming modoel to support well-known Enterprise Integration Patterns.
+
+    - artifact-id: "spring-integration-azure-storage-queue"
+      azure-service: storage
+      azure-sub-service: queues
+      contains-source-code: true
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#spring-integration-support
+      description: |
+        Microsoft's Spring Integration extension for Azure Storage Queue. Spring Integration extends
+        the Spring programming modoel to support well-known Enterprise Integration Patterns.    
+
+    - artifact-id: "spring-cloud-azure-stream-binder-eventhubs"
+      azure-service: eventhubs
+      contains-source-code: true
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#spring-cloud-stream-binder-for-azure-event-hubs
+      description: |
+        Microsoft's Spring Cloud Stream Binder provides Spring Cloud Stream Binder for Azure 
+        Event Hubs which allows you to build message-driven microservice using Spring Cloud 
+        Stream based on Azure Event Hubs.
+
+    - artifact-id: "spring-cloud-azure-stream-binder-servicebus"
+      azure-service: servicebus
+      contains-source-code: true
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-cloud-stream-binder-java-app-with-service-bus
+      description: |
+        Microsoft's Spring Cloud Stream Binder provides Spring Cloud Stream Binder for Azure 
+        Service Bus which allows you to build message-driven microservice using Spring Cloud 
+        Stream based on Azure Service Bus.
+
+    - artifact-id: "azure-security-keyvault-jca"
+      group-id: com.azure
+      azure-service: keyvault
+      azure-sub-service: certificates
+      library-type: client
+      v4: false
+      contains-source-code: true
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/keyvault/azure-security-keyvault-jca
+      ms-docs-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/keyvault/azure-security-keyvault-jca/README.md
+      sample-link: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/keyvault/azure-securtiy-keyvault-jca
+
+  client-artifacts:
+
+    - artifact-id: "azure-security-keyvault-certificates"
+      azure-service: keyvault
+      azure-sub-service: certificates
+
+    - artifact-id: "azure-security-keyvault-secrets"
+      azure-service: keyvault
+      azure-sub-service: secrets
+
+    - artifact-id: "azure-messaging-eventhubs"
+      azure-service: eventhubs
+
+    - artifact-id: "azure-messaging-servicebus"
+      azure-service: servicebus
+
+    - artifact-id: "azure-storage-blob"
+      azure-service: storage
+      azure-sub-service: blobs
+
+    - artifact-id: "azure-storage-file-share"
+      azure-service: storage
+      azure-sub-service: fileshare
+
+    - artifact-id: "azure-storage-queue"
+      azure-service: storage
+      azure-sub-service: queues
+
+    - artifact-id: "azure-spring-data-cosmos"
+      azure-service: cosmos
+      label: spring-data
+
+
+  services:
+    - name: "Spring Cloud Azure Bom"
+      features:
+        - name: "Spring Cloud Azure Bom"
+          artifact-selectors:
+            - label: bom
+          description: |
+            BOM for Spring Cloud Azure support.
+
+    - name: "Active Directory"
+      features:
+        - name: "Active Directory"
+          ms-docs: https://docs.microsoft.com/azure/active-directory/fundamentals/
+          artifact-selectors:
+            - azure-service: aad
+          description: |
+            Azure Active Directory (Azure AD) is Microsoft's cloud-based identity and access 
+            management service, which helps your employees sign in and access resources.
+
+    - name: "Active Directory B2C"
+      features:
+        - name: "Active Directory B2C"
+          ms-docs: https://docs.microsoft.com/azure/active-directory-b2c
+          artifact-selectors:
+            - azure-service: aadb2c
+          description: |
+            Azure Active Directory B2C provides business-to-customer identity as a service. Your 
+            customers use their preferred social, enterprise, or local account identities to get 
+            single sign-on access to your applications and APIs.
+
+    - name: "App Configuration"
+      features:
+        - name: "App Configuration"
+          ms-docs: https://docs.microsoft.com/azure/azure-app-configuration/
+          artifact-selectors:
+            - azure-service: appconfiguration
+          description: |
+            Azure App Configuration provides a service to centrally manage application settings and 
+            feature flags. Modern programs, especially programs running in a cloud, generally have 
+            many components that are distributed in nature. Spreading configuration settings across 
+            these components can lead to hard-to-troubleshoot errors during an application 
+            deployment. Use App Configuration to store all the settings for your application and 
+            secure their accesses in one place.        
+
+    - name: "Cosmos DB"
+      features:
+        - name: "Spring Data Cosmos"
+          ms-docs: https://docs.microsoft.com/azure/cosmos-db/
+          artifact-selectors:
+            - azure-service: cosmos
+              label: spring-data
+          description: |
+            Azure Cosmos DB is a fully managed NoSQL database for modern app development. 
+            Single-digit millisecond response times, and automatic and instant scalability, 
+            guarantee speed at any scale. Business continuity is assured with SLA-backed 
+            availability and enterprise-grade security.
+        - name: "Cosmos DB"
+          ms-docs: https://docs.microsoft.com/azure/cosmos-db/
+          artifact-selectors:
+            - azure-service: cosmos
+          description: |
+            Azure Cosmos DB is a fully managed NoSQL database for modern app development. 
+            Single-digit millisecond response times, and automatic and instant scalability, 
+            guarantee speed at any scale. Business continuity is assured with SLA-backed 
+            availability and enterprise-grade security.    
+
+    - name: "Key Vault"
+      features:
+        - name: "Key Vault - Certificates"
+          ms-docs: https://docs.microsoft.com/azure/key-vault/
+          artifact-selectors:
+            - azure-service: keyvault
+              azure-sub-service: certificates
+          description: |
+            The JCA Provider for Azure Key Vault is a Java Cryptography Architecture provider for 
+            certificates in Azure Key Vault.
+        - name: "Key Vault - Secrets"
+          ms-docs: https://docs.microsoft.com/azure/key-vault/secrets/about-secrets
+          artifact-selectors:
+            - azure-service: keyvault
+              azure-sub-service: secrets
+          description: |
+            Azure Key Vault Secrets allows you to securely store and tightly control the access to 
+            tokens, passwords, API keys, and other secrets. This library offers operations to 
+            create, retrieve, update, delete, purge, backup, restore, and list the secrets and its 
+            versions.
+
+    - name: "Storage"
+      features:
+        - name: "Storage - Blobs"
+          ms-docs: https://docs.microsoft.com/azure/storage/blobs/
+          artifact-selectors:
+            - azure-service: storage
+              azure-sub-service: blobs
+          description: |
+            Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob Storage 
+            is optimized for storing massive amounts of unstructured data. Unstructured data is 
+            data that does not adhere to a particular data model or definition, such as text or 
+            binary data.
+        - name: "Storage - File Shares"
+          ms-docs: https://docs.microsoft.com/azure/storage/files/
+          artifact-selectors:
+            - azure-service: storage
+              azure-sub-service: fileshare
+          description: |
+            todo
+        - name: "Storage - Queues"
+          ms-docs: https://docs.microsoft.com/azure/storage/queues/
+          artifact-selectors:
+            - azure-service: storage
+              azure-sub-service: queues
+          description: |
+            Azure Queue Storage is a service for storing large numbers of messages. You access 
+            messages from anywhere in the world via authenticated calls using HTTP or HTTPS. A 
+            queue message can be up to 64 KB in size. A queue may contain millions of messages, up 
+            to the total capacity limit of a storage account. Queues are commonly used to create a 
+            backlog of work to process asynchronously. 
+
+    - name: "Service Bus"
+      features:
+        - name: "Service Bus"
+          ms-docs: https://docs.microsoft.com/azure/service-bus-messaging/
+          artifact-selectors:
+            - azure-service: servicebus
+          description: |
+            Microsoft Azure Service Bus is a fully managed enterprise integration message broker. 
+            Service Bus can decouple applications and services. Service Bus offers a reliable and 
+            secure platform for asynchronous transfer of data and state. Data is transferred 
+            between different applications and services using messages.
+        - name: "Service Bus JMS"
+          ms-docs: https://docs.microsoft.com/azure/service-bus-messaging/how-to-use-java-message-service-20
+          artifact-selectors:
+            - azure-service: servicebus
+              label: jms
+          description: |
+            Microsoft Azure Service Bus is a fully managed enterprise integration message broker.
+            Service Bus can decouple applications and services. Service Bus offers a reliable and
+            secure platform for asynchronous transfer of data and state. Data is transferred 
+            between different applications and services using messages.
+
+    - name: "Event Hubs"
+      features:
+        - name: "Event Hubs"
+          ms-docs: https://docs.microsoft.com/azure/event-hubs/
+          artifact-selectors:
+            - azure-service: eventhubs
+          description: |
+            Azure Event Hubs is a big data streaming platform and event ingestion service. It can 
+            receive and process millions of events per second. Data sent to an event hub can be 
+            transformed and stored by using any real-time analytics provider or batching/storage 
+            adapters.
+
+  compatibilities:
+    - artifact-id: spring-cloud-azure-dependencies
+      lowest-spring-boot-version: 2.5.0
+      highest-spring-boot-version: 2.6.5
+      mappings:
+        - lowest-spring-boot-version: 2.5.0
+          highest-spring-boot-version: 2.5.11
+          version: 4.0.0
+        - lowest-spring-boot-version: 2.6.0
+          highest-spring-boot-version: 2.6.5
+          version: 4.0.0
+    - artifact-id: azure-spring-boot-starter-keyvault-certificates
+      lowest-spring-boot-version: 2.5.0
+      highest-spring-boot-version: 2.6.5
+      mappings:
+        - lowest-spring-boot-version: 2.5.0
+          highest-spring-boot-version: 2.5.11
+          version: 3.14.0
+        - lowest-spring-boot-version: 2.6.0
+          highest-spring-boot-version: 2.6.5
+          version: 3.14.0
+  versions:
+    - artifact-id: spring-cloud-azure-dependencies
+      ga-version: 4.0.0
+      preview-version: 4.0.0-beta.3
+    - artifact-id: azure-security-keyvault-jca
+      ga-version: 2.6.0
+      preview-version: 1.0.0-beta.7
+    - artifact-id: azure-spring-boot-starter-keyvault-certificates
+      ga-version: 3.14.0
+      preview-version: 3.0.0-beta.7
