@@ -118,7 +118,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
             try (OutputStream fos = new FileOutputStream(resultFile)) {
                 String comment =
                     """
-                    # Please refer to this link to see design details and how to change: 
+                    # Please refer to this link to see design details and how to change:
                     # https://dev.azure.com/azure-spring-integration/spring-integration-private/_wiki/wikis/spring-integration-private.wiki/280/Spring-Reference-for-Intellij-Plugin.
                     
                     """;
@@ -220,7 +220,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
                   imports {
                     mavenBom "com.azure.spring:spring-cloud-azure-dependencies:${azure.version}"
                   }
-                }    
+                }
                 """);
             return dependencyPatternMap;
         } else {
