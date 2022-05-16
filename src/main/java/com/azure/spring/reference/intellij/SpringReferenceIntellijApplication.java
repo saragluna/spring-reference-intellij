@@ -232,12 +232,16 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
 
     private VersionSpec findVersion(SpringArtifactSpec springArtifactSpec) {
         VersionSpec bomVersion = this.versionSpecMap.get(springArtifactSpec.getBomArtifact());
+        VersionSpec artifactVersion = this.versionSpecMap.get(springArtifactSpec.getArtifactId());
         if (!springArtifactSpec.isV4() || !LibraryType.spring.equals(springArtifactSpec.getLibraryType()) || bomVersion == null) {
-            VersionSpec artifactVersion = this.versionSpecMap.get(springArtifactSpec.getArtifactId());
             if (artifactVersion == null) {
                 throw new IllegalStateException("No version found for " + springArtifactSpec.getArtifactId());
             }
             return artifactVersion;
+        }
+        if (artifactVersion != null && !artifactVersion.isHasPreviewVersion()) {
+            artifactVersion.setGaVersion(bomVersion.getGaVersion());
+            return  artifactVersion;
         }
         return bomVersion;
     }
