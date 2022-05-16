@@ -22,6 +22,8 @@ public class SpringArtifactSpec {
     private String javaDocsPattern = "https://azuresdkdocs.blob.core.windows.net/$web/java/%s/%s/index.html";
     private boolean containsSourceCode = false;
 
+    private boolean hasSampleLink = true;
+
     public String getGroupId() {
         return groupId;
     }
@@ -148,5 +150,13 @@ public class SpringArtifactSpec {
 
     public void setContainsSourceCode(boolean containsSourceCode) {
         this.containsSourceCode = containsSourceCode;
+    }
+
+    public boolean isHasSampleLink() {
+        return hasSampleLink;
+    }
+
+    public void setHasSampleLink(boolean hasSampleLink) {
+        this.hasSampleLink = hasSampleLink;
     }
 }

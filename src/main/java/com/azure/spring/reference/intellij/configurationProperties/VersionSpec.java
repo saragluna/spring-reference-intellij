@@ -5,6 +5,7 @@ public class VersionSpec {
     private String artifactId;
     private String gaVersion;
     private String previewVersion;
+    private boolean hasPreviewVersion = true;
 
     public String getArtifactId() {
         return artifactId;
@@ -28,5 +29,13 @@ public class VersionSpec {
 
     public void setPreviewVersion(String previewVersion) {
         this.previewVersion = previewVersion;
+    }
+
+    public boolean isHasPreviewVersion() {
+        return hasPreviewVersion;
+    }
+
+    public void setHasPreviewVersion(boolean hasPreviewVersion) {
+        this.hasPreviewVersion = hasPreviewVersion;
     }
 }

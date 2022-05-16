@@ -65,17 +65,14 @@ spring.cloud.azure.reference:
         Secrets stored in Azure Key Vault could be easily used and conveniently accessed like other
         externalized configuration property.
 
-    - artifact-id: "azure-spring-boot-starter-keyvault-certificates"
+    - artifact-id: "spring-cloud-azure-starter-keyvault-certificates"
       azure-service: keyvault
       azure-sub-service: certificates
-      v4: false
-      contains-source-code: true
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault-certificates
-      github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/azure-spring-boot-starter-keyvault-certificates
-      sample-link: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/keyvault/azure-spring-boot-starter-keyvault-certificates
+      has-sample-link: false
       description: |
-        Microsoft's Spring Boot Starter provides a secure and frictionless way to enable TLS with
-        help from Azure Key Vault and managed identity for Azure resources.  
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Azure Key Vault Certificates.
 
     - artifact-id: "spring-cloud-azure-starter-storage-blob"
       azure-service: storage
@@ -301,8 +298,8 @@ spring.cloud.azure.reference:
             - azure-service: keyvault
               azure-sub-service: certificates
           description: |
-            The JCA Provider for Azure Key Vault is a Java Cryptography Architecture provider for
-            certificates in Azure Key Vault.
+            Azure Key Vault enables Microsoft Azure applications and users to store and use certificates, which are
+            built on top of keys and secrets and add an automated renewal feature.
         - name: "Key Vault - Secrets"
           ms-docs: https://docs.microsoft.com/azure/key-vault/secrets/about-secrets
           artifact-selectors:
@@ -386,31 +383,20 @@ spring.cloud.azure.reference:
   compatibilities:
     - artifact-id: spring-cloud-azure-dependencies
       lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 2.6.5
+      highest-spring-boot-version: 2.6.7
       mappings:
         - lowest-spring-boot-version: 2.5.0
-          highest-spring-boot-version: 2.5.11
-          version: 4.0.0
+          highest-spring-boot-version: 2.5.13
+          version: 4.1.0
         - lowest-spring-boot-version: 2.6.0
-          highest-spring-boot-version: 2.6.5
-          version: 4.0.0
-    - artifact-id: azure-spring-boot-starter-keyvault-certificates
-      lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 2.6.5
-      mappings:
-        - lowest-spring-boot-version: 2.5.0
-          highest-spring-boot-version: 2.5.11
-          version: 3.14.0
-        - lowest-spring-boot-version: 2.6.0
-          highest-spring-boot-version: 2.6.5
-          version: 3.14.0
+          highest-spring-boot-version: 2.6.7
+          version: 4.1.0
   versions:
     - artifact-id: spring-cloud-azure-dependencies
-      ga-version: 4.0.0
+      ga-version: 4.1.0
       preview-version: 4.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-keyvault-certificates
+      has-preview-version: false
     - artifact-id: azure-security-keyvault-jca
       ga-version: 2.6.0
       preview-version: 1.0.0-beta.7
-    - artifact-id: azure-spring-boot-starter-keyvault-certificates
-      ga-version: 3.14.0
-      preview-version: 3.0.0-beta.7

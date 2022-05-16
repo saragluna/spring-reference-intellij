@@ -232,12 +232,16 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
 
     private VersionSpec findVersion(SpringArtifactSpec springArtifactSpec) {
         VersionSpec bomVersion = this.versionSpecMap.get(springArtifactSpec.getBomArtifact());
+        VersionSpec artifactVersion = this.versionSpecMap.get(springArtifactSpec.getArtifactId());
         if (!springArtifactSpec.isV4() || !LibraryType.spring.equals(springArtifactSpec.getLibraryType()) || bomVersion == null) {
-            VersionSpec artifactVersion = this.versionSpecMap.get(springArtifactSpec.getArtifactId());
             if (artifactVersion == null) {
                 throw new IllegalStateException("No version found for " + springArtifactSpec.getArtifactId());
             }
             return artifactVersion;
+        }
+        if (artifactVersion != null && !artifactVersion.isHasPreviewVersion()) {
+            artifactVersion.setGaVersion(bomVersion.getGaVersion());
+            return  artifactVersion;
         }
         return bomVersion;
     }
@@ -249,7 +253,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
         result.add(new MavenRepoLink(springArtifactSpec.getGroupId(), artifactId, version));
         if (springArtifactSpec.isV4()) {
             result.add(new GitHubLink(artifactId, version, springArtifactSpec.isBom()));
-            if (!springArtifactSpec.isBom()) {
+            if (springArtifactSpec.isHasSampleLink() && !springArtifactSpec.isBom()) {
                 result.add(new SampleLink(artifactId, version, springArtifactSpec.getAzureService()));
             }
         } else {
@@ -258,7 +262,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
             } else {
                 LOGGER.warn("No github link set for {}", artifactId);
             }
-            if (springArtifactSpec.getSampleLink() != null) {
+            if (springArtifactSpec.isHasSampleLink() && springArtifactSpec.getSampleLink() != null) {
                 result.add(new SampleLink(springArtifactSpec.getSampleLink()));
             } else {
                 LOGGER.warn("No sample link set for {}", artifactId);
