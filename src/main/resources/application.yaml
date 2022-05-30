@@ -386,17 +386,20 @@ spring.cloud.azure.reference:
       highest-spring-boot-version: 2.6.7
       mappings:
         - lowest-spring-boot-version: 2.5.0
-          highest-spring-boot-version: 2.5.13
-          version: 4.1.0
+          highest-spring-boot-version: 2.5.14
+          version: 4.2.0
         - lowest-spring-boot-version: 2.6.0
-          highest-spring-boot-version: 2.6.7
-          version: 4.1.0
+          highest-spring-boot-version: 2.6.8
+          version: 4.2.0
+        - lowest-spring-boot-version: 2.7.0
+          highest-spring-boot-version: 2.7.0
+          version: 4.2.0
   versions:
     - artifact-id: spring-cloud-azure-dependencies
-      ga-version: 4.1.0
+      ga-version: 4.2.0
       preview-version: 4.0.0-beta.3
     - artifact-id: spring-cloud-azure-starter-keyvault-certificates
       has-preview-version: false
     - artifact-id: azure-security-keyvault-jca
-      ga-version: 2.6.0
+      ga-version: 2.7.0
       preview-version: 1.0.0-beta.7
