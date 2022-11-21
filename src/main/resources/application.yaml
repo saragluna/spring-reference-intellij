@@ -58,7 +58,6 @@ spring.cloud.azure.reference:
 
     - artifact-id: "spring-cloud-azure-starter-keyvault"
       azure-service: keyvault
-      azure-sub-service: keyvault
       ms-docs-link: https://learn.microsoft.com/azure/key-vault/
       description: |
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
@@ -85,7 +84,6 @@ spring.cloud.azure.reference:
 
     - artifact-id: "spring-cloud-azure-starter-storage"
       azure-service: storage
-      azure-sub-service: storage
       ms-docs-link: https://docs.microsoft.com/azure/storage/
       description: |
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
@@ -338,7 +336,6 @@ spring.cloud.azure.reference:
           ms-docs: https://docs.microsoft.com/azure/key-vault/
           artifact-selectors:
             - azure-service: keyvault
-              azure-sub-service: keyvault
           description: |
             Azure Key Vault enables Microsoft Azure applications and users to store and use secrets and certificates.
         - name: "Key Vault - Certificates"
@@ -366,7 +363,6 @@ spring.cloud.azure.reference:
           ms-docs: https://docs.microsoft.com/azure/storage/
           artifact-selectors:
             - azure-service: storage
-              azure-sub-service: storage
           description: |
             Azure Storage is Microsoft's object storage solution for the cloud.
         - name: "Storage - Blobs"
