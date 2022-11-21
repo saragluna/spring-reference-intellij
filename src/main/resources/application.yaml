@@ -42,6 +42,7 @@ spring.cloud.azure.reference:
     - artifact-id: "spring-cloud-azure-starter-data-cosmos"
       azure-service: cosmos
       label: spring-data
+      v4: false
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db
       description: |
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
@@ -54,6 +55,14 @@ spring.cloud.azure.reference:
       description: |
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
         Azure Event Hubs.
+
+    - artifact-id: "spring-cloud-azure-starter-keyvault"
+      azure-service: keyvault
+      azure-sub-service: keyvault
+      ms-docs-link: https://learn.microsoft.com/azure/key-vault/
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Azure Key Vault.
 
     - artifact-id: "spring-cloud-azure-starter-keyvault-secrets"
       azure-service: keyvault
@@ -73,6 +82,15 @@ spring.cloud.azure.reference:
       description: |
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
         Azure Key Vault Certificates.
+
+    - artifact-id: "spring-cloud-azure-starter-storage"
+      azure-service: storage
+      azure-sub-service: storage
+      ms-docs-link: https://docs.microsoft.com/azure/storage/
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Azure Storage, and implements Spring Resource abstraction for Azure Storage
+        service which allows you to interact with Storage Account using Spring programming model.
 
     - artifact-id: "spring-cloud-azure-starter-storage-blob"
       azure-service: storage
@@ -189,7 +207,24 @@ spring.cloud.azure.reference:
       contains-source-code: true
       github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/keyvault/azure-security-keyvault-jca
       ms-docs-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/keyvault/azure-security-keyvault-jca/README.md
-      sample-link: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/keyvault/azure-securtiy-keyvault-jca
+
+    - artifact-id: "spring-cloud-azure-starter-jdbc-mysql"
+      azure-service: mysql
+      v4: false
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_6.0.0-beta.3/sdk/spring/spring-cloud-azure-starter-jdbc-mysql
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Azure Database for MySQL.
+
+    - artifact-id: "spring-cloud-azure-starter-jdbc-postgresql"
+      azure-service: postgresql
+      v4: false
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_6.0.0-beta.3/sdk/spring/spring-cloud-azure-starter-jdbc-postgresql
+      ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Azure Database for PostgreSQL.
 
   client-artifacts:
 
@@ -222,6 +257,14 @@ spring.cloud.azure.reference:
     - artifact-id: "azure-spring-data-cosmos"
       azure-service: cosmos
       label: spring-data
+
+    - artifact-id: "azure-identity-providers-jdbc-mysql"
+      azure-service: mysql
+      label: jdbc
+
+    - artifact-id: "azure-identity-providers-jdbc-postgresql"
+      azure-service: postgresql
+      label: jdbc
 
 
   services:
@@ -292,6 +335,13 @@ spring.cloud.azure.reference:
 
     - name: "Key Vault"
       features:
+        - name: "Key Vault"
+          ms-docs: https://docs.microsoft.com/azure/key-vault/
+          artifact-selectors:
+            - azure-service: keyvault
+              azure-sub-service: keyvault
+          description: |
+            Azure Key Vault enables Microsoft Azure applications and users to store and use secrets and certificates.
         - name: "Key Vault - Certificates"
           ms-docs: https://docs.microsoft.com/azure/key-vault/
           artifact-selectors:
@@ -313,6 +363,13 @@ spring.cloud.azure.reference:
 
     - name: "Storage"
       features:
+        - name: "Storage"
+          ms-docs: https://docs.microsoft.com/azure/storage/
+          artifact-selectors:
+            - azure-service: storage
+              azure-sub-service: storage
+          description: |
+            Azure Storage is Microsoft's object storage solution for the cloud.
         - name: "Storage - Blobs"
           ms-docs: https://docs.microsoft.com/azure/storage/blobs/
           artifact-selectors:
@@ -380,8 +437,46 @@ spring.cloud.azure.reference:
             transformed and stored by using any real-time analytics provider or batching/storage
             adapters.
 
+    - name: "MySQL"
+      features:
+        - name: "Database for MySQL"
+          ms-docs: https://docs.microsoft.com/azure/mysql/
+          artifact-selectors:
+            - azure-service: mysql
+          description: |
+            Azure Database for MySQL is cost effective and easy to set up, operate, and scale.
+            Enjoy advanced security, same-zone or zone-redundant high availability, and a
+            service-level agreement (SLA) of up to 99.99 percent.
+
+    - name: "PostgreSQL"
+      features:
+        - name: "Database for PostgreSQL"
+          ms-docs: https://docs.microsoft.com/azure/postgresql/
+          artifact-selectors:
+            - azure-service: postgresql
+          description: |
+            Azure Database for PostgreSQL offers a service-level agreement (SLA)
+            of up to 99.99 percent uptime, AI-powered performance optimization, and
+            advanced security.
+
   compatibilities:
     - artifact-id: spring-cloud-azure-dependencies
+      lowest-spring-boot-version: 2.5.0
+      highest-spring-boot-version: 3.0.0-RC1
+      mappings:
+        - lowest-spring-boot-version: 2.5.0
+          highest-spring-boot-version: 2.5.14
+          version: 4.4.1
+        - lowest-spring-boot-version: 2.6.0
+          highest-spring-boot-version: 2.6.12
+          version: 4.4.1
+        - lowest-spring-boot-version: 2.7.0
+          highest-spring-boot-version: 2.7.3
+          version: 4.4.1
+        - lowest-spring-boot-version: 3.0.0-RC1
+          highest-spring-boot-version: 3.0.0-RC1
+          version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-data-cosmos
       lowest-spring-boot-version: 2.5.0
       highest-spring-boot-version: 2.7.3
       mappings:
@@ -394,12 +489,117 @@ spring.cloud.azure.reference:
         - lowest-spring-boot-version: 2.7.0
           highest-spring-boot-version: 2.7.3
           version: 4.4.1
+    - artifact-id: spring-cloud-azure-starter-jdbc-mysql
+      lowest-spring-boot-version: 2.5.0
+      highest-spring-boot-version: 2.7.3
+      mappings:
+        - lowest-spring-boot-version: 2.5.0
+          highest-spring-boot-version: 2.5.14
+          version: 4.5.0-beta.1
+        - lowest-spring-boot-version: 2.6.0
+          highest-spring-boot-version: 2.6.12
+          version: 4.5.0-beta.1
+        - lowest-spring-boot-version: 2.7.0
+          highest-spring-boot-version: 2.7.3
+          version: 4.5.0-beta.1
+        - lowest-spring-boot-version: 3.0.0-RC1
+          highest-spring-boot-version: 3.0.0-RC1
+          version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-jdbc-postgresql
+      lowest-spring-boot-version: 2.5.0
+      highest-spring-boot-version: 2.7.3
+      mappings:
+        - lowest-spring-boot-version: 2.5.0
+          highest-spring-boot-version: 2.5.14
+          version: 4.5.0-beta.1
+        - lowest-spring-boot-version: 2.6.0
+          highest-spring-boot-version: 2.6.12
+          version: 4.5.0-beta.1
+        - lowest-spring-boot-version: 2.7.0
+          highest-spring-boot-version: 2.7.3
+          version: 4.5.0-beta.1
+        - lowest-spring-boot-version: 3.0.0-RC1
+          highest-spring-boot-version: 3.0.0-RC1
+          version: 6.0.0-beta.3
   versions:
     - artifact-id: spring-cloud-azure-dependencies
       ga-version: 4.4.1
-      preview-version: 4.0.0-beta.3
+      preview-version: 6.0.0-beta.3
     - artifact-id: spring-cloud-azure-starter-keyvault-certificates
-      has-preview-version: false
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
     - artifact-id: azure-security-keyvault-jca
       ga-version: 2.7.0
-      preview-version: 1.0.0-beta.7
+      has-preview-version: false
+    - artifact-id: spring-cloud-azure-starter-active-directory
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-active-directory-b2c
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-appconfiguration
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-data-cosmos
+      ga-version: 4.4.1
+      has-preview-version: false
+    - artifact-id: spring-cloud-azure-starter-cosmos
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-keyvault
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-keyvault-secrets
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-storage
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-storage-blob
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-storage-file-share
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-storage-queue
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-integration-storage-queue
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-integration-azure-storage-queue
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-servicebus
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-integration-servicebus
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-integration-azure-servicebus
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-stream-binder-servicebus
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-servicebus-jms
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-eventhubs
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-integration-eventhubs
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-integration-azure-eventhubs
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-stream-binder-eventhubs
+      ga-version: 4.4.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-jdbc-mysql
+      ga-version: 4.5.0-beta.1
+      preview-version: 6.0.0-beta.3
+    - artifact-id: spring-cloud-azure-starter-jdbc-postgresql
+      ga-version: 4.5.0-beta.1
+      preview-version: 6.0.0-beta.3

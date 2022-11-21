@@ -233,7 +233,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
     private VersionSpec findVersion(SpringArtifactSpec springArtifactSpec) {
         VersionSpec bomVersion = this.versionSpecMap.get(springArtifactSpec.getBomArtifact());
         VersionSpec artifactVersion = this.versionSpecMap.get(springArtifactSpec.getArtifactId());
-        if (!springArtifactSpec.isV4() || !LibraryType.spring.equals(springArtifactSpec.getLibraryType()) || bomVersion == null) {
+        if (!springArtifactSpec.getV4() || !LibraryType.spring.equals(springArtifactSpec.getLibraryType()) || bomVersion == null) {
             if (artifactVersion == null) {
                 throw new IllegalStateException("No version found for " + springArtifactSpec.getArtifactId());
             }
@@ -251,7 +251,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
         String artifactId = springArtifactSpec.getArtifactId();
         String version = versionSpec.getGaVersion() == null ? versionSpec.getPreviewVersion() : versionSpec.getGaVersion();
         result.add(new MavenRepoLink(springArtifactSpec.getGroupId(), artifactId, version));
-        if (springArtifactSpec.isV4()) {
+        if (springArtifactSpec.getV4()) {
             result.add(new GitHubLink(artifactId, version, springArtifactSpec.isBom()));
             if (springArtifactSpec.isHasSampleLink() && !springArtifactSpec.isBom()) {
                 result.add(new SampleLink(artifactId, version, springArtifactSpec.getAzureService()));
@@ -291,7 +291,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
         }
         boolean isBom = springArtifactSpec.isBom();
 
-        CompatibilitySpec compatibility = springArtifactSpec.isV4() ?
+        CompatibilitySpec compatibility = springArtifactSpec.getV4() ?
             compatibilityMap.get(springArtifactSpec.getBomArtifact()) :
             compatibilityMap.get(artifactId);
 

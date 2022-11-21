@@ -9,7 +9,9 @@ public enum AzureService {
     EventHubs("eventhubs"),
     ServiceBus("servicebus"),
     Storage("storage"),
-    KeyVault("keyvault");
+    KeyVault("keyvault"),
+    MySQL("mysql"),
+    PostgreSQL("postgresql");
 
     private final String sampleRepoIdentifier;
 
