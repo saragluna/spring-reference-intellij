@@ -80,7 +80,7 @@ public class SpringArtifactSpec {
         this.azureSubService = azureSubService;
     }
 
-    public boolean getV4() {
+    public boolean isV4() {
         return isV4;
     }
 

@@ -233,7 +233,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
     private VersionSpec findVersion(SpringArtifactSpec springArtifactSpec) {
         VersionSpec bomVersion = this.versionSpecMap.get(springArtifactSpec.getBomArtifact());
         VersionSpec artifactVersion = this.versionSpecMap.get(springArtifactSpec.getArtifactId());
-        if (!springArtifactSpec.getV4() || !LibraryType.spring.equals(springArtifactSpec.getLibraryType()) || bomVersion == null) {
+        if (!springArtifactSpec.isV4() || !LibraryType.spring.equals(springArtifactSpec.getLibraryType()) || bomVersion == null) {
             if (artifactVersion == null) {
                 throw new IllegalStateException("No version found for " + springArtifactSpec.getArtifactId());
             }
@@ -251,7 +251,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
         String artifactId = springArtifactSpec.getArtifactId();
         String version = versionSpec.getGaVersion() == null ? versionSpec.getPreviewVersion() : versionSpec.getGaVersion();
         result.add(new MavenRepoLink(springArtifactSpec.getGroupId(), artifactId, version));
-        if (springArtifactSpec.getV4()) {
+        if (springArtifactSpec.isV4()) {
             result.add(new GitHubLink(artifactId, version, springArtifactSpec.isBom()));
             if (springArtifactSpec.isHasSampleLink() && !springArtifactSpec.isBom()) {
                 result.add(new SampleLink(artifactId, version, springArtifactSpec.getAzureService()));
@@ -262,7 +262,9 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
             } else {
                 LOGGER.warn("No github link set for {}", artifactId);
             }
-            if (springArtifactSpec.isHasSampleLink() && springArtifactSpec.getSampleLink() != null) {
+            if (springArtifactSpec.isHasSampleLink() && !springArtifactSpec.isBom()) {
+                result.add(new SampleLink(artifactId, version, springArtifactSpec.getAzureService()));
+            } else if (springArtifactSpec.isHasSampleLink() && springArtifactSpec.getSampleLink() != null) {
                 result.add(new SampleLink(springArtifactSpec.getSampleLink()));
             } else {
                 LOGGER.warn("No sample link set for {}", artifactId);
@@ -291,7 +293,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
         }
         boolean isBom = springArtifactSpec.isBom();
 
-        CompatibilitySpec compatibility = springArtifactSpec.getV4() ?
+        CompatibilitySpec compatibility = springArtifactSpec.isV4() ?
             compatibilityMap.get(springArtifactSpec.getBomArtifact()) :
             compatibilityMap.get(artifactId);
 
