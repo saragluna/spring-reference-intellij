@@ -291,10 +291,15 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
         }
         boolean isBom = springArtifactSpec.isBom();
 
-        CompatibilitySpec compatibility = springArtifactSpec.isV4() ?
-            compatibilityMap.get(springArtifactSpec.getBomArtifact()) :
-            compatibilityMap.get(artifactId);
 
+        CompatibilitySpec compatibility = null;
+        if (compatibilityMap.containsKey(artifactId)) {
+            compatibility = compatibilityMap.get(artifactId);
+        } else if (springArtifactSpec.isV4()) {
+            compatibility = compatibilityMap.get(springArtifactSpec.getBomArtifact());
+        } else {
+            throw new IllegalStateException("A non v4 artifact requires a compatibility spec.");
+        }
 
         return new SpringProperties(
             !isBom,
