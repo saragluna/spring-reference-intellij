@@ -42,7 +42,6 @@ spring.cloud.azure.reference:
     - artifact-id: "spring-cloud-azure-starter-data-cosmos"
       azure-service: cosmos
       label: spring-data
-      v4: false
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db
       sample-link: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/cosmos/spring-cloud-azure-starter-data-cosmos/
       description: |
@@ -212,7 +211,6 @@ spring.cloud.azure.reference:
 
     - artifact-id: "spring-cloud-azure-starter-jdbc-mysql"
       azure-service: mysql
-      v4: false
       github-link: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_6.0.0-beta.3/sdk/spring/spring-cloud-azure-starter-jdbc-mysql
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
       description: |
@@ -221,7 +219,6 @@ spring.cloud.azure.reference:
 
     - artifact-id: "spring-cloud-azure-starter-jdbc-postgresql"
       azure-service: postgresql
-      v4: false
       github-link: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_6.0.0-beta.3/sdk/spring/spring-cloud-azure-starter-jdbc-postgresql
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
       description: |

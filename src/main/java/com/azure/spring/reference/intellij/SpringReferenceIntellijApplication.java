@@ -262,9 +262,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
             } else {
                 LOGGER.warn("No github link set for {}", artifactId);
             }
-            if (springArtifactSpec.isHasSampleLink() && !springArtifactSpec.isBom()) {
-                result.add(new SampleLink(artifactId, version, springArtifactSpec.getAzureService()));
-            } else if (springArtifactSpec.isHasSampleLink() && springArtifactSpec.getSampleLink() != null) {
+            if (springArtifactSpec.isHasSampleLink() && springArtifactSpec.getSampleLink() != null) {
                 result.add(new SampleLink(springArtifactSpec.getSampleLink()));
             } else {
                 LOGGER.warn("No sample link set for {}", artifactId);
@@ -293,10 +291,15 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
         }
         boolean isBom = springArtifactSpec.isBom();
 
-        CompatibilitySpec compatibility = springArtifactSpec.isV4() ?
-            compatibilityMap.get(springArtifactSpec.getBomArtifact()) :
-            compatibilityMap.get(artifactId);
 
+        CompatibilitySpec compatibility = null;
+        if (compatibilityMap.containsKey(artifactId)) {
+            compatibility = compatibilityMap.get(artifactId);
+        } else if (springArtifactSpec.isV4()) {
+            compatibility = compatibilityMap.get(springArtifactSpec.getBomArtifact());
+        } else {
+            throw new IllegalStateException("A non v4 artifact requires a compatibility spec.");
+        }
 
         return new SpringProperties(
             !isBom,
