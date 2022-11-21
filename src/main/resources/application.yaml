@@ -529,12 +529,6 @@ spring.cloud.azure.reference:
       preview-version: 6.0.0-beta.3
     - artifact-id: azure-security-keyvault-jca
       ga-version: 2.7.0
-    - artifact-id: spring-cloud-azure-starter-active-directory
-      ga-version: 4.4.1
-      preview-version: 6.0.0-beta.3
-    - artifact-id: spring-cloud-azure-starter-active-directory-b2c
-      ga-version: 4.4.1
-      preview-version: 6.0.0-beta.3
     - artifact-id: spring-cloud-azure-starter-data-cosmos
       ga-version: 4.4.1
     - artifact-id: spring-cloud-azure-starter-jdbc-mysql
