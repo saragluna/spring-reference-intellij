@@ -31,6 +31,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.util.StringUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -233,7 +234,10 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
     private VersionSpec findVersion(SpringArtifactSpec springArtifactSpec) {
         VersionSpec bomVersion = this.versionSpecMap.get(springArtifactSpec.getBomArtifact());
         VersionSpec artifactVersion = this.versionSpecMap.get(springArtifactSpec.getArtifactId());
-        if (!springArtifactSpec.isV4() || !LibraryType.spring.equals(springArtifactSpec.getLibraryType()) || bomVersion == null) {
+        if (!springArtifactSpec.isV4()
+            || !LibraryType.spring.equals(springArtifactSpec.getLibraryType())
+            || bomVersion == null
+            || isOverridableGAVersion(bomVersion, artifactVersion)) {
             if (artifactVersion == null) {
                 throw new IllegalStateException("No version found for " + springArtifactSpec.getArtifactId());
             }
@@ -244,6 +248,13 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
             return  artifactVersion;
         }
         return bomVersion;
+    }
+
+    private boolean isOverridableGAVersion(VersionSpec bomVersion, VersionSpec artifactVersion) {
+        if (bomVersion == null || artifactVersion == null || !StringUtils.hasText(artifactVersion.getGaVersion())) {
+            return false;
+        }
+        return !bomVersion.getGaVersion().equals(artifactVersion.getGaVersion());
     }
 
     private Map<String, String> buildLinks(SpringArtifactSpec springArtifactSpec, VersionSpec versionSpec) {

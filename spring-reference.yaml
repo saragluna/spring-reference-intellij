@@ -202,7 +202,6 @@
     - artifactId: spring-cloud-azure-starter-data-cosmos
       groupId: com.azure.spring
       versionGA: 4.4.1
-      versionPreview: 6.0.0-beta.3
       description: |-
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
         Spring Data Azure Cosmos DB, which enables developers to easily integrate with Azure Cosmos
@@ -1018,21 +1017,21 @@
     artifacts:
     - artifactId: spring-cloud-azure-starter-jdbc-mysql
       groupId: com.azure.spring
-      versionGA: 4.4.1
+      versionGA: 4.5.0-beta.1
       versionPreview: 6.0.0-beta.3
       description: |-
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
         Azure Database for MySQL.
       type: spring
       links:
-        github: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_4.4.1/sdk/spring/spring-cloud-azure-starter-jdbc-mysql
+        github: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_4.5.0-beta.1/sdk/spring/spring-cloud-azure-starter-jdbc-mysql
         msdocs: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
         repopath: https://search.maven.org/artifact/com.azure.spring/spring-cloud-azure-starter-jdbc-mysql
-        sample: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/spring-cloud-azure_4.4.1/mysql/spring-cloud-azure-starter-jdbc-mysql/
+        sample: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/spring-cloud-azure_4.5.0-beta.1/mysql/spring-cloud-azure-starter-jdbc-mysql/
       springProperties:
         starter: true
         bom: spring-cloud-azure-dependencies
-        compatibilityRange: "[2.5.0,2.7.3]"
+        compatibilityRange: "[2.5.0,3.0.0-RC1]"
         mappings:
         - compatibilityRange: "[2.5.0,2.5.14]"
           groupId: com.azure.spring
@@ -1061,21 +1060,21 @@
     artifacts:
     - artifactId: spring-cloud-azure-starter-jdbc-postgresql
       groupId: com.azure.spring
-      versionGA: 4.4.1
+      versionGA: 4.5.0-beta.1
       versionPreview: 6.0.0-beta.3
       description: |-
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
         Azure Database for PostgreSQL.
       type: spring
       links:
-        github: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_4.4.1/sdk/spring/spring-cloud-azure-starter-jdbc-postgresql
+        github: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_4.5.0-beta.1/sdk/spring/spring-cloud-azure-starter-jdbc-postgresql
         msdocs: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
         repopath: https://search.maven.org/artifact/com.azure.spring/spring-cloud-azure-starter-jdbc-postgresql
-        sample: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/spring-cloud-azure_4.4.1/postgresql/spring-cloud-azure-starter-jdbc-postgresql/
+        sample: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/spring-cloud-azure_4.5.0-beta.1/postgresql/spring-cloud-azure-starter-jdbc-postgresql/
       springProperties:
         starter: true
         bom: spring-cloud-azure-dependencies
-        compatibilityRange: "[2.5.0,2.7.3]"
+        compatibilityRange: "[2.5.0,3.0.0-RC1]"
         mappings:
         - compatibilityRange: "[2.5.0,2.5.14]"
           groupId: com.azure.spring
