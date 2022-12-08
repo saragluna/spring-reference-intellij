@@ -209,7 +209,7 @@ spring.cloud.azure.reference:
 
     - artifact-id: "spring-cloud-azure-starter-jdbc-mysql"
       azure-service: mysql
-      github-link: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_6.0.0-beta.3/sdk/spring/spring-cloud-azure-starter-jdbc-mysql
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/spring-cloud-azure-starter-jdbc-mysql
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
       description: |
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
@@ -217,7 +217,7 @@ spring.cloud.azure.reference:
 
     - artifact-id: "spring-cloud-azure-starter-jdbc-postgresql"
       azure-service: postgresql
-      github-link: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_6.0.0-beta.3/sdk/spring/spring-cloud-azure-starter-jdbc-postgresql
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/spring-cloud-azure-starter-jdbc-postgresql
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
       description: |
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
@@ -457,76 +457,40 @@ spring.cloud.azure.reference:
   compatibilities:
     - artifact-id: spring-cloud-azure-dependencies
       lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 3.0.0-RC1
+      highest-spring-boot-version: 3.0.0-RC2
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.14
-          version: 4.4.1
+          version: 4.5.0
         - lowest-spring-boot-version: 2.6.0
-          highest-spring-boot-version: 2.6.12
-          version: 4.4.1
+          highest-spring-boot-version: 2.6.14
+          version: 4.5.0
         - lowest-spring-boot-version: 2.7.0
-          highest-spring-boot-version: 2.7.3
-          version: 4.4.1
-        - lowest-spring-boot-version: 3.0.0-RC1
-          highest-spring-boot-version: 3.0.0-RC1
-          version: 6.0.0-beta.3
+          highest-spring-boot-version: 2.7.6
+          version: 4.5.0
+        - lowest-spring-boot-version: 3.0.0-RC2
+          highest-spring-boot-version: 3.0.0-RC2
+          version: 6.0.0-beta.4
     - artifact-id: spring-cloud-azure-starter-data-cosmos
       lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 2.7.3
+      highest-spring-boot-version: 2.7.6
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.14
-          version: 4.4.1
+          version: 4.5.0
         - lowest-spring-boot-version: 2.6.0
-          highest-spring-boot-version: 2.6.12
-          version: 4.4.1
+          highest-spring-boot-version: 2.6.14
+          version: 4.5.0
         - lowest-spring-boot-version: 2.7.0
-          highest-spring-boot-version: 2.7.3
-          version: 4.4.1
-    - artifact-id: spring-cloud-azure-starter-jdbc-mysql
-      lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 2.7.3
-      mappings:
-        - lowest-spring-boot-version: 2.5.0
-          highest-spring-boot-version: 2.5.14
-          version: 4.5.0-beta.1
-        - lowest-spring-boot-version: 2.6.0
-          highest-spring-boot-version: 2.6.12
-          version: 4.5.0-beta.1
-        - lowest-spring-boot-version: 2.7.0
-          highest-spring-boot-version: 2.7.3
-          version: 4.5.0-beta.1
-        - lowest-spring-boot-version: 3.0.0-RC1
-          highest-spring-boot-version: 3.0.0-RC1
-          version: 6.0.0-beta.3
-    - artifact-id: spring-cloud-azure-starter-jdbc-postgresql
-      lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 2.7.3
-      mappings:
-        - lowest-spring-boot-version: 2.5.0
-          highest-spring-boot-version: 2.5.14
-          version: 4.5.0-beta.1
-        - lowest-spring-boot-version: 2.6.0
-          highest-spring-boot-version: 2.6.12
-          version: 4.5.0-beta.1
-        - lowest-spring-boot-version: 2.7.0
-          highest-spring-boot-version: 2.7.3
-          version: 4.5.0-beta.1
-        - lowest-spring-boot-version: 3.0.0-RC1
-          highest-spring-boot-version: 3.0.0-RC1
-          version: 6.0.0-beta.3
+          highest-spring-boot-version: 2.7.6
+          version: 4.5.0
   versions:
     - artifact-id: spring-cloud-azure-dependencies
-      ga-version: 4.4.1
-      preview-version: 6.0.0-beta.3
+      ga-version: 4.5.0
+      preview-version: 6.0.0-beta.4
     - artifact-id: azure-security-keyvault-jca
       ga-version: 2.7.0
     - artifact-id: spring-cloud-azure-starter-data-cosmos
-      ga-version: 4.4.1
-    - artifact-id: spring-cloud-azure-starter-jdbc-mysql
-      ga-version: 4.5.0-beta.1
-      preview-version: 6.0.0-beta.3
-    - artifact-id: spring-cloud-azure-starter-jdbc-postgresql
-      ga-version: 4.5.0-beta.1
-      preview-version: 6.0.0-beta.3
+      ga-version: 4.5.0
+      has-preview-version: false
+
