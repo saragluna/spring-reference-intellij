@@ -457,7 +457,7 @@ spring.cloud.azure.reference:
   compatibilities:
     - artifact-id: spring-cloud-azure-dependencies
       lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 3.0.0-RC2
+      highest-spring-boot-version: 3.0.1
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.14
@@ -468,9 +468,9 @@ spring.cloud.azure.reference:
         - lowest-spring-boot-version: 2.7.0
           highest-spring-boot-version: 2.7.6
           version: 4.5.0
-        - lowest-spring-boot-version: 3.0.0-RC2
-          highest-spring-boot-version: 3.0.0-RC2
-          version: 6.0.0-beta.4
+        - lowest-spring-boot-version: 3.0.0
+          highest-spring-boot-version: 3.0.1
+          version: 5.0.0
     - artifact-id: spring-cloud-azure-starter-data-cosmos
       lowest-spring-boot-version: 2.5.0
       highest-spring-boot-version: 2.7.6
@@ -487,7 +487,7 @@ spring.cloud.azure.reference:
   versions:
     - artifact-id: spring-cloud-azure-dependencies
       ga-version: 4.5.0
-      preview-version: 6.0.0-beta.4
+      preview-version: 5.0.0
     - artifact-id: azure-security-keyvault-jca
       ga-version: 2.7.0
     - artifact-id: spring-cloud-azure-starter-data-cosmos
