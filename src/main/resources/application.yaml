@@ -461,13 +461,13 @@ spring.cloud.azure.reference:
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.14
-          version: 4.6.0
+          version: 4.7.0
         - lowest-spring-boot-version: 2.6.0
           highest-spring-boot-version: 2.6.14
-          version: 4.6.0
+          version: 4.7.0
         - lowest-spring-boot-version: 2.7.0
-          highest-spring-boot-version: 2.7.8
-          version: 4.6.0
+          highest-spring-boot-version: 2.7.10
+          version: 4.7.0
         - lowest-spring-boot-version: 3.0.0
           highest-spring-boot-version: 3.0.1
           version: 5.0.0
@@ -477,20 +477,20 @@ spring.cloud.azure.reference:
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.14
-          version: 4.6.0
+          version: 4.7.0
         - lowest-spring-boot-version: 2.6.0
           highest-spring-boot-version: 2.6.14
-          version: 4.6.0
+          version: 4.7.0
         - lowest-spring-boot-version: 2.7.0
-          highest-spring-boot-version: 2.7.8
-          version: 4.6.0
+          highest-spring-boot-version: 2.7.10
+          version: 4.7.0
   versions:
     - artifact-id: spring-cloud-azure-dependencies
-      ga-version: 4.6.0
+      ga-version: 4.7.0
       preview-version: 5.0.0
     - artifact-id: azure-security-keyvault-jca
-      ga-version: 2.7.0
+      ga-version: 2.7.1
     - artifact-id: spring-cloud-azure-starter-data-cosmos
-      ga-version: 4.6.0
+      ga-version: 4.7.0
       has-preview-version: false
 
