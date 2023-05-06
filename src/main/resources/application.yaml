@@ -32,6 +32,35 @@ spring.cloud.azure.reference:
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
         Azure App Configuration.
 
+    - artifact-id: "spring-cloud-azure-starter-appconfiguration-config"
+      azure-service: appconfiguration
+      description: |
+        Microsoft's Spring Boot Starter helps developers to load properties from Azure Configuration Store for Spring Application.
+
+    - artifact-id: "spring-cloud-azure-appconfiguration-config"
+      azure-service: appconfiguration
+      ms-docs-link: https://learn.microsoft.com/azure/azure-app-configuration/enable-dynamic-configuration-java-spring-app
+      description: |
+        Microsoft's Spring Boot Starter helps developers to load properties from Azure Configuration Store for Spring Application.
+
+    - artifact-id: "spring-cloud-azure-appconfiguration-config-web"
+      azure-service: appconfiguration
+      ms-docs-link: https://learn.microsoft.com/azure/azure-app-configuration/enable-dynamic-configuration-java-spring-app
+      description: |
+        Microsoft's Spring Boot Starter helps developers to load properties from Azure Configuration Store for Spring Application.
+
+    - artifact-id: "spring-cloud-azure-feature-management"
+      azure-service: appconfiguration
+      ms-docs-link: https://learn.microsoft.com/java/api/overview/azure/spring-cloud-feature-management-readme?view=azure-java-stable
+      description: |
+        Microsoft's Spring Boot Starter provide a way for Spring Boot applications to turn features on or off dynamically. Developers can use feature flags in simple use cases like conditional statement to more advanced scenarios like conditionally adding routes.
+
+    - artifact-id: "spring-cloud-azure-feature-management-web"
+      azure-service: appconfiguration
+      ms-docs-link: https://learn.microsoft.com/java/api/overview/azure/spring-cloud-feature-management-readme?view=azure-java-stable
+      description: |
+        Microsoft's Spring Boot Starter provide a way for Spring Boot applications to turn features on or off dynamically. Developers can use feature flags in simple use cases like conditional statement to more advanced scenarios like conditionally adding routes.
+
     - artifact-id: "spring-cloud-azure-starter-cosmos"
       azure-service: cosmos
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
