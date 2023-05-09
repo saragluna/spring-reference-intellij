@@ -196,7 +196,7 @@
       links:
         github: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_4.7.0/sdk/spring/spring-cloud-azure-starter-appconfiguration-config
         repopath: https://search.maven.org/artifact/com.azure.spring/spring-cloud-azure-starter-appconfiguration-config
-        sample: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/spring-cloud-azure_4.7.0/appconfiguration/spring-cloud-azure-starter-appconfiguration-config/
+        sample: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/spring-cloud-azure_4.7.0/appconfiguration/azure-spring-cloud-starter-appconfiguration-config/
       springProperties:
         starter: true
         bom: spring-cloud-azure-dependencies
