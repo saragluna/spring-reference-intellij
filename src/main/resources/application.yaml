@@ -54,6 +54,12 @@ spring.cloud.azure.reference:
         Spring Data Azure Cosmos DB, which enables developers to easily integrate with Azure Cosmos
         DB SQL API using Spring Data.
 
+    - artifact-id: "spring-cloud-azure-starter-eventgrid"
+      azure-service: eventgrid
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Azure Event Grid.
+
     - artifact-id: "spring-cloud-azure-starter-eventhubs"
       azure-service: eventhubs
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#auto-configure-azure-sdk-clients
@@ -237,6 +243,9 @@ spring.cloud.azure.reference:
     - artifact-id: "azure-security-keyvault-secrets"
       azure-service: keyvault
       azure-sub-service: secrets
+
+    - artifact-id: "azure-messaging-eventgrid"
+      azure-service: eventgrid
 
     - artifact-id: "azure-messaging-eventhubs"
       azure-service: eventhubs
@@ -425,6 +434,24 @@ spring.cloud.azure.reference:
             secure platform for asynchronous transfer of data and state. Data is transferred
             between different applications and services using messages.
 
+    - name: "Event Grid"
+      features:
+        - name: "Event Grid"
+          ms-docs: https://docs.microsoft.com/azure/event-grid/
+          artifact-selectors:
+            - azure-service: eventgrid
+          description: |
+            Azure Event Grid is a highly scalable, fully managed Pub Sub message
+            distribution service. It can help build data pipelines with device data, integrate
+            applications, and build event-driven serverless architectures. It enables
+            clients to publish and subscribe to messages over the MQTT v3.1.1 and v5.0
+            protocols to support Internet of Things (IoT) solutions. Through HTTP, It
+            enables you to build event-driven solutions where a publisher service announces
+            its system state changes (events) to subscriber applications. It can be configured
+            to send events to subscribers (push delivery) or subscribers can connect to
+            Event Grid to read events (pull delivery). It supports CloudEvents 1.0 specification
+            to provide interoperability across systems.
+
     - name: "Event Hubs"
       features:
         - name: "Event Hubs"
@@ -462,40 +489,24 @@ spring.cloud.azure.reference:
   compatibilities:
     - artifact-id: spring-cloud-azure-dependencies
       lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 3.0.6
+      highest-spring-boot-version: 3.1.0
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.15
-          version: 4.8.0
+          version: 4.9.0
         - lowest-spring-boot-version: 2.6.0
           highest-spring-boot-version: 2.6.15
-          version: 4.8.0
+          version: 4.9.0
         - lowest-spring-boot-version: 2.7.0
           highest-spring-boot-version: 2.7.12
-          version: 4.8.0
+          version: 4.9.0
         - lowest-spring-boot-version: 3.0.0
-          highest-spring-boot-version: 3.0.6
-          version: 5.2.0
-    - artifact-id: spring-cloud-azure-starter-data-cosmos
-      lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 2.7.12
-      mappings:
-        - lowest-spring-boot-version: 2.5.0
-          highest-spring-boot-version: 2.5.15
-          version: 4.8.0
-        - lowest-spring-boot-version: 2.6.0
-          highest-spring-boot-version: 2.6.15
-          version: 4.8.0
-        - lowest-spring-boot-version: 2.7.0
-          highest-spring-boot-version: 2.7.12
-          version: 4.8.0
+          highest-spring-boot-version: 3.1.0
+          version: 5.3.0
   versions:
     - artifact-id: spring-cloud-azure-dependencies
-      ga-version: 4.8.0
-      preview-version: 5.2.0
+      ga-version: 4.9.0
+      preview-version: 5.3.0
     - artifact-id: azure-security-keyvault-jca
       ga-version: 2.7.1
-    - artifact-id: spring-cloud-azure-starter-data-cosmos
-      ga-version: 4.8.0
-      has-preview-version: false
 
