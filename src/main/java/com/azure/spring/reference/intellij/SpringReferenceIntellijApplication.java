@@ -119,8 +119,7 @@ public class SpringReferenceIntellijApplication implements CommandLineRunner {
                 String comment =
                     """
                     # Please refer to this link to see design details and how to change:
-                    # https://dev.azure.com/azure-spring-integration/spring-integration-private/_wiki/wikis/spring-integration-private.wiki/280/Spring-Reference-for-Intellij-Plugin.
-                    
+                    # https://dev.azure.com/SpringOnAzure/Spring%20on%20Azure/_wiki/wikis/spring-integration-private.wiki/280/Spring-Reference-for-Intellij-Plugin
                     """;
                 fos.write(comment.getBytes(StandardCharsets.UTF_8));
                 objectMapper.writeValue(fos, result);

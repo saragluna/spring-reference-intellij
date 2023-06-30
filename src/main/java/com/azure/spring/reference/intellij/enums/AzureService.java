@@ -6,6 +6,7 @@ public enum AzureService {
     Aad("aad"),
     AadB2c("aad"),
     Cosmos("cosmos"),
+    EventGrid("eventgrid"),
     EventHubs("eventhubs"),
     ServiceBus("servicebus"),
     Storage("storage"),
