@@ -490,30 +490,30 @@ spring.cloud.azure.reference:
   compatibilities:
     - artifact-id: spring-cloud-azure-dependencies
       lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 3.2.0
+      highest-spring-boot-version: 3.2.2
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.15
-          version: 4.14.0
+          version: 4.15.0
         - lowest-spring-boot-version: 2.6.0
           highest-spring-boot-version: 2.6.15
-          version: 4.14.0
+          version: 4.15.0
         - lowest-spring-boot-version: 2.7.0
           highest-spring-boot-version: 2.7.18
-          version: 4.14.0
+          version: 4.15.0
         - lowest-spring-boot-version: 3.0.0
           highest-spring-boot-version: 3.0.13
-          version: 5.8.0
+          version: 5.9.1
         - lowest-spring-boot-version: 3.1.0
-          highest-spring-boot-version: 3.1.6
-          version: 5.8.0
+          highest-spring-boot-version: 3.1.8
+          version: 5.9.1
         - lowest-spring-boot-version: 3.2.0
-          highest-spring-boot-version: 3.2.0
-          version: 5.8.0
+          highest-spring-boot-version: 3.2.2
+          version: 5.9.1
   versions:
     - artifact-id: spring-cloud-azure-dependencies
-      ga-version: 4.14.0
-      preview-version: 5.8.0
+      ga-version: 4.15.0
+      preview-version: 5.9.1
     - artifact-id: azure-security-keyvault-jca
       ga-version: 2.8.0
 
