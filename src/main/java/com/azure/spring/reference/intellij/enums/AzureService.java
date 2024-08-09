@@ -12,7 +12,9 @@ public enum AzureService {
     Storage("storage"),
     KeyVault("keyvault"),
     MySQL("mysql"),
-    PostgreSQL("postgresql");
+    PostgreSQL("postgresql"),
+    Redis("redis"),
+    Testcontainers("testcontainers");
 
     private final String sampleRepoIdentifier;
 
