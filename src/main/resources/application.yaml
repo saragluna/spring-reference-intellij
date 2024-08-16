@@ -54,6 +54,15 @@ spring.cloud.azure.reference:
         Spring Data Azure Cosmos DB, which enables developers to easily integrate with Azure Cosmos
         DB SQL API using Spring Data.
 
+    - artifact-id: "spring-cloud-azure-starter-data-redis-lettuce"
+      azure-service: redis
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/spring-cloud-azure-starter-data-redis-lettuce
+      ms-docs-link: https://learn.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-initializer-java-app-with-redis-cache
+      sample-link: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/main/cache
+      description: |
+        Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
+        Azure Cache for Redis.
+
     - artifact-id: "spring-cloud-azure-starter-eventgrid"
       azure-service: eventgrid
       ms-docs-link: https://learn.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-initializer-java-app-with-event-grid
@@ -234,6 +243,14 @@ spring.cloud.azure.reference:
       description: |
         Microsoft's Spring Boot Starter helps developers to finish the auto-configuration of
         Azure Database for PostgreSQL.
+
+    - artifact-id: "spring-cloud-azure-testcontainers"
+      azure-service: testcontainers
+      contains-source-code: true
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/spring-cloud-azure-testcontainers
+      description: |
+        Microsoft's Spring Cloud Azure lib helps developers to use testcontainers to test Cosmos,
+        Storage Blob, Storage Queue.
 
   client-artifacts:
 
@@ -487,10 +504,35 @@ spring.cloud.azure.reference:
             of up to 99.99 percent uptime, AI-powered performance optimization, and
             advanced security.
 
+    - name: "Redis"
+      features:
+        - name: "Azure Cache for Redis"
+          ms-docs: https://docs.microsoft.com/azure/azure-cache-for-redis/
+          artifact-selectors:
+            - azure-service: redis
+          description: |
+            Azure Cache for Redis provides an in-memory data store based on the Redis software.
+            Redis improves the performance and scalability of an application that uses backend
+            data stores heavily. It's able to process large volumes of application requests by
+            keeping frequently accessed data in the server memory, which can be written to and
+            read from quickly. Redis brings a critical low-latency and high-throughput data
+            storage solution to modern applications.
+
+    - name: "Testcontainers"
+      features:
+        - name: "Testcontainers"
+          artifact-selectors:
+            - azure-service: testcontainers
+          description: |
+            The Testcontainers library provides a way to manage services running inside Docker
+            containers. It integrates with JUnit, allowing you to write a test class that can
+            start up a container before any of the tests run. Testcontainers is especially
+            useful for writing integration tests that talk to a real backend service.
+
   compatibilities:
     - artifact-id: spring-cloud-azure-dependencies
       lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 3.3.1
+      highest-spring-boot-version: 3.3.2
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.15
@@ -503,20 +545,51 @@ spring.cloud.azure.reference:
           version: 4.19.0
         - lowest-spring-boot-version: 3.0.0
           highest-spring-boot-version: 3.0.13
-          version: 5.14.0
+          version: 5.15.0
         - lowest-spring-boot-version: 3.1.0
           highest-spring-boot-version: 3.1.12
-          version: 5.14.0
+          version: 5.15.0
         - lowest-spring-boot-version: 3.2.0
           highest-spring-boot-version: 3.2.7
-          version: 5.14.0
+          version: 5.15.0
         - lowest-spring-boot-version: 3.3.0
-          highest-spring-boot-version: 3.3.1
-          version: 5.14.0
+          highest-spring-boot-version: 3.3.2
+          version: 5.15.0
+    - artifact-id: spring-cloud-azure-starter-data-redis-lettuce
+      lowest-spring-boot-version: 3.0.0
+      highest-spring-boot-version: 3.3.2
+      mappings:
+        - lowest-spring-boot-version: 3.0.0
+          highest-spring-boot-version: 3.0.13
+          version: 5.15.0
+        - lowest-spring-boot-version: 3.1.0
+          highest-spring-boot-version: 3.1.12
+          version: 5.15.0
+        - lowest-spring-boot-version: 3.2.0
+          highest-spring-boot-version: 3.2.7
+          version: 5.15.0
+        - lowest-spring-boot-version: 3.3.0
+          highest-spring-boot-version: 3.3.2
+          version: 5.15.0
+    - artifact-id: spring-cloud-azure-testcontainers
+      lowest-spring-boot-version: 3.0.0
+      highest-spring-boot-version: 3.3.2
+      mappings:
+        - lowest-spring-boot-version: 3.0.0
+          highest-spring-boot-version: 3.0.13
+          version: 5.15.0
+        - lowest-spring-boot-version: 3.1.0
+          highest-spring-boot-version: 3.1.12
+          version: 5.15.0
+        - lowest-spring-boot-version: 3.2.0
+          highest-spring-boot-version: 3.2.7
+          version: 5.15.0
+        - lowest-spring-boot-version: 3.3.0
+          highest-spring-boot-version: 3.3.2
+          version: 5.15.0
   versions:
     - artifact-id: spring-cloud-azure-dependencies
-      ga-version: 4.19.0
-      preview-version: 5.14.0
+      ga-version: 5.15.0
     - artifact-id: azure-security-keyvault-jca
-      ga-version: 2.8.1
+      ga-version: 2.8.2
 
