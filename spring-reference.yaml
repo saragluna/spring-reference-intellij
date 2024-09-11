@@ -1576,3 +1576,46 @@
           groupId: com.azure.spring
           artifactId: spring-cloud-azure-testcontainers
           version: 5.15.0
+- name: Dockercompose
+  content:
+  - name: Dockercompose
+    description: |-
+      The Docker Compose library can be included in a project to provide support for
+      working with containers using Docker Compose. It can help search for a compose.yml
+      and other common compose filenames in your working directory, call docker compose
+      up with the discovered compose.yml, create service connection beans for each
+      supported container and call docker compose stop when the application is shutdown.
+    artifacts:
+    - artifactId: spring-cloud-azure-docker-compose
+      groupId: com.azure.spring
+      versionGA: 5.15.0
+      description: |-
+        Microsoft's Spring Cloud Azure lib helps developers to use Docker Compose, now it
+        supports Azure Storage Blob and Azure Storage Queue.
+      type: spring
+      links:
+        javadoc: https://azuresdkdocs.blob.core.windows.net/$web/java/spring-cloud-azure-docker-compose/5.15.0/index.html
+        github: https://github.com/Azure/azure-sdk-for-java/tree/spring-cloud-azure_5.15.0/sdk/spring/spring-cloud-azure-docker-compose
+        repopath: https://search.maven.org/artifact/com.azure.spring/spring-cloud-azure-docker-compose
+        sample: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/spring-cloud-azure_5.15.0/dockercompose/spring-cloud-azure-docker-compose/
+      springProperties:
+        starter: true
+        bom: spring-cloud-azure-dependencies
+        compatibilityRange: "[3.0.0,3.3.2]"
+        mappings:
+        - compatibilityRange: "[3.0.0,3.0.13]"
+          groupId: com.azure.spring
+          artifactId: spring-cloud-azure-docker-compose
+          version: 5.15.0
+        - compatibilityRange: "[3.1.0,3.1.12]"
+          groupId: com.azure.spring
+          artifactId: spring-cloud-azure-docker-compose
+          version: 5.15.0
+        - compatibilityRange: "[3.2.0,3.2.7]"
+          groupId: com.azure.spring
+          artifactId: spring-cloud-azure-docker-compose
+          version: 5.15.0
+        - compatibilityRange: "[3.3.0,3.3.2]"
+          groupId: com.azure.spring
+          artifactId: spring-cloud-azure-docker-compose
+          version: 5.15.0
