@@ -252,6 +252,14 @@ spring.cloud.azure.reference:
         Microsoft's Spring Cloud Azure lib helps developers to use testcontainers to test Cosmos,
         Storage Blob, Storage Queue.
 
+    - artifact-id: "spring-cloud-azure-docker-compose"
+      azure-service: dockercompose
+      contains-source-code: true
+      github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/spring-cloud-azure-docker-compose
+      description: |
+        Microsoft's Spring Cloud Azure lib helps developers to use Docker Compose, now it
+        supports Azure Storage Blob and Azure Storage Queue.
+
   client-artifacts:
 
     - artifact-id: "azure-security-keyvault-certificates"
@@ -529,10 +537,22 @@ spring.cloud.azure.reference:
             start up a container before any of the tests run. Testcontainers is especially
             useful for writing integration tests that talk to a real backend service.
 
+    - name: "Dockercompose"
+      features:
+        - name: "Dockercompose"
+          artifact-selectors:
+            - azure-service: dockercompose
+          description: |
+            The Docker Compose library can be included in a project to provide support for
+            working with containers using Docker Compose. It can help search for a compose.yml
+            and other common compose filenames in your working directory, call docker compose
+            up with the discovered compose.yml, create service connection beans for each
+            supported container and call docker compose stop when the application is shutdown.
+
   compatibilities:
     - artifact-id: spring-cloud-azure-dependencies
       lowest-spring-boot-version: 2.5.0
-      highest-spring-boot-version: 3.3.2
+      highest-spring-boot-version: 3.3.3
       mappings:
         - lowest-spring-boot-version: 2.5.0
           highest-spring-boot-version: 2.5.15
@@ -545,51 +565,67 @@ spring.cloud.azure.reference:
           version: 4.19.0
         - lowest-spring-boot-version: 3.0.0
           highest-spring-boot-version: 3.0.13
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.1.0
           highest-spring-boot-version: 3.1.12
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.2.0
           highest-spring-boot-version: 3.2.7
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.3.0
-          highest-spring-boot-version: 3.3.2
-          version: 5.15.0
+          highest-spring-boot-version: 3.3.3
+          version: 5.16.0
     - artifact-id: spring-cloud-azure-starter-data-redis-lettuce
       lowest-spring-boot-version: 3.0.0
-      highest-spring-boot-version: 3.3.2
+      highest-spring-boot-version: 3.3.3
       mappings:
         - lowest-spring-boot-version: 3.0.0
           highest-spring-boot-version: 3.0.13
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.1.0
           highest-spring-boot-version: 3.1.12
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.2.0
           highest-spring-boot-version: 3.2.7
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.3.0
-          highest-spring-boot-version: 3.3.2
-          version: 5.15.0
+          highest-spring-boot-version: 3.3.3
+          version: 5.16.0
     - artifact-id: spring-cloud-azure-testcontainers
       lowest-spring-boot-version: 3.0.0
-      highest-spring-boot-version: 3.3.2
+      highest-spring-boot-version: 3.3.3
       mappings:
         - lowest-spring-boot-version: 3.0.0
           highest-spring-boot-version: 3.0.13
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.1.0
           highest-spring-boot-version: 3.1.12
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.2.0
           highest-spring-boot-version: 3.2.7
-          version: 5.15.0
+          version: 5.16.0
         - lowest-spring-boot-version: 3.3.0
-          highest-spring-boot-version: 3.3.2
-          version: 5.15.0
+          highest-spring-boot-version: 3.3.3
+          version: 5.16.0
+    - artifact-id: spring-cloud-azure-docker-compose
+      lowest-spring-boot-version: 3.0.0
+      highest-spring-boot-version: 3.3.3
+      mappings:
+        - lowest-spring-boot-version: 3.0.0
+          highest-spring-boot-version: 3.0.13
+          version: 5.16.0
+        - lowest-spring-boot-version: 3.1.0
+          highest-spring-boot-version: 3.1.12
+          version: 5.16.0
+        - lowest-spring-boot-version: 3.2.0
+          highest-spring-boot-version: 3.2.7
+          version: 5.16.0
+        - lowest-spring-boot-version: 3.3.0
+          highest-spring-boot-version: 3.3.3
+          version: 5.16.0
   versions:
     - artifact-id: spring-cloud-azure-dependencies
-      ga-version: 5.15.0
+      ga-version: 5.16.0
     - artifact-id: azure-security-keyvault-jca
       ga-version: 2.8.2
 

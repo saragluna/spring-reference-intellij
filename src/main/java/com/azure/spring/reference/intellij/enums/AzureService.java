@@ -14,7 +14,8 @@ public enum AzureService {
     MySQL("mysql"),
     PostgreSQL("postgresql"),
     Redis("redis"),
-    Testcontainers("testcontainers");
+    Testcontainers("testcontainers"),
+    Dockercompose("dockercompose");
 
     private final String sampleRepoIdentifier;
 
