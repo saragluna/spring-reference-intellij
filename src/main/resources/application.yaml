@@ -246,7 +246,6 @@ spring.cloud.azure.reference:
 
     - artifact-id: "spring-cloud-azure-testcontainers"
       azure-service: testcontainers
-      contains-source-code: true
       github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/spring-cloud-azure-testcontainers
       description: |
         Microsoft's Spring Cloud Azure lib helps developers to use testcontainers to test Cosmos,
@@ -254,7 +253,6 @@ spring.cloud.azure.reference:
 
     - artifact-id: "spring-cloud-azure-docker-compose"
       azure-service: dockercompose
-      contains-source-code: true
       github-link: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/spring-cloud-azure-docker-compose
       description: |
         Microsoft's Spring Cloud Azure lib helps developers to use Docker Compose, now it

@@ -4,7 +4,7 @@ import com.azure.spring.reference.intellij.records.Artifact;
 
 public class JavaDocLink implements Link {
 
-    private static final String PATH_PATTERN = "https://azuresdkdocs.blob.core.windows.net/$web/java/%s/%s/index.html";
+    private static final String PATH_PATTERN = "https://azuresdkdocs.z19.web.core.windows.net/java/%s/%s/index.html";
     private final String path;
 
     public JavaDocLink(String path) {

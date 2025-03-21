@@ -19,7 +19,7 @@ public class SpringArtifactSpec {
     private String sampleLink;
     private String msDocsLink;
     private String javaDocsLink;
-    private String javaDocsPattern = "https://azuresdkdocs.blob.core.windows.net/$web/java/%s/%s/index.html";
+    private String javaDocsPattern = "https://azuresdkdocs.z19.web.core.windows.net/java/%s/%s/index.html";
     private boolean containsSourceCode = false;
 
     private boolean hasSampleLink = true;
