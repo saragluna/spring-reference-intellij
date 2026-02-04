@@ -180,7 +180,7 @@ spring.cloud.azure.reference:
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#spring-integration-support
       description: |
         Microsoft's Spring Integration extension for Azure Event Hubs. Spring Integration extends
-        the Spring programming modoel to support well-known Enterprise Integration Patterns.
+        the Spring programming model to support well-known Enterprise Integration Patterns.
 
     - artifact-id: "spring-integration-azure-servicebus"
       azure-service: servicebus
@@ -188,7 +188,7 @@ spring.cloud.azure.reference:
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#spring-integration-support
       description: |
         Microsoft's Spring Integration extension for Azure Service Bus. Spring Integration extends
-        the Spring programming modoel to support well-known Enterprise Integration Patterns.
+        the Spring programming model to support well-known Enterprise Integration Patterns.
 
     - artifact-id: "spring-integration-azure-storage-queue"
       azure-service: storage
@@ -197,7 +197,7 @@ spring.cloud.azure.reference:
       ms-docs-link: https://docs.microsoft.com/azure/developer/java/spring-framework/spring-cloud-azure#spring-integration-support
       description: |
         Microsoft's Spring Integration extension for Azure Storage Queue. Spring Integration extends
-        the Spring programming modoel to support well-known Enterprise Integration Patterns.
+        the Spring programming model to support well-known Enterprise Integration Patterns.
 
     - artifact-id: "spring-cloud-azure-stream-binder-eventhubs"
       azure-service: eventhubs
