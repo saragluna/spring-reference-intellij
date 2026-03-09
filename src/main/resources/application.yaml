@@ -566,16 +566,16 @@ spring.cloud.azure.reference:
           version: 5.24.1
         - lowest-spring-boot-version: 3.1.0
           highest-spring-boot-version: 3.1.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.2.0
           highest-spring-boot-version: 3.2.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.3.0
           highest-spring-boot-version: 3.3.13
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.4.0
           highest-spring-boot-version: 3.4.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.5.0
           highest-spring-boot-version: 3.5.10
           version: 6.1.0
@@ -591,16 +591,16 @@ spring.cloud.azure.reference:
           version: 5.24.1
         - lowest-spring-boot-version: 3.1.0
           highest-spring-boot-version: 3.1.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.2.0
           highest-spring-boot-version: 3.2.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.3.0
           highest-spring-boot-version: 3.3.13
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.4.0
           highest-spring-boot-version: 3.4.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.5.0
           highest-spring-boot-version: 3.5.10
           version: 6.1.0
@@ -616,16 +616,16 @@ spring.cloud.azure.reference:
           version: 5.24.1
         - lowest-spring-boot-version: 3.1.0
           highest-spring-boot-version: 3.1.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.2.0
           highest-spring-boot-version: 3.2.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.3.0
           highest-spring-boot-version: 3.3.13
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.4.0
           highest-spring-boot-version: 3.4.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.5.0
           highest-spring-boot-version: 3.5.10
           version: 6.1.0
@@ -641,16 +641,16 @@ spring.cloud.azure.reference:
           version: 5.24.1
         - lowest-spring-boot-version: 3.1.0
           highest-spring-boot-version: 3.1.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.2.0
           highest-spring-boot-version: 3.2.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.3.0
           highest-spring-boot-version: 3.3.13
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.4.0
           highest-spring-boot-version: 3.4.12
-          version: 5.24.1
+          version: 5.25.0
         - lowest-spring-boot-version: 3.5.0
           highest-spring-boot-version: 3.5.10
           version: 6.1.0
